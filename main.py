@@ -1,12 +1,13 @@
-import os
-import scipy.misc
-import numpy as np
 import json
+import os
+
+import numpy as np
+import scipy.misc
+import tensorflow as tf
 
 from model import DCGAN
-from utils import pp, visualize, to_json, show_all_variables, expand_path, timestamp
-
-import tensorflow as tf
+from utils import (expand_path, pp, show_all_variables, timestamp, to_json,
+                   visualize)
 
 flags = tf.app.flags
 flags.DEFINE_integer("epoch", 25, "Epoch to train [25]")
